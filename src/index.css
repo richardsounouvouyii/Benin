@@ -1,0 +1,85 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* Include Mitr with weight 300 (Light) + others */
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Hero title specific styles requested by the user */
+.hero-title {
+	font-family: 'Permanent Marker', cursive;
+	font-weight: 400;
+	font-style: normal; /* Regular */
+	font-size: 96px;
+	line-height: 100%;
+	letter-spacing: 0; /* 0% */
+	text-align: center;
+}
+
+/* Subtitle (hero) using Mitr */
+.hero-subtitle {
+  font-family: 'Mitr', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Section paragraph style requested: Mitr light, 20px, 140% line-height */
+.section-text {
+  font-family: 'Mitr', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* Make the hero title responsive on small screens */
+@media (max-width: 640px) {
+	.hero-title {
+		font-size: 40px;
+	}
+}
+
+/* Nav link underline: apparait au hover et si le lien est actif (aria-current="page" ou .active)
+	 - on décale la barre plus bas pour qu'elle ne soit pas collée au texte
+	 - animation plus douce avec un petit délai pour éviter un pop trop rapide
+	 - largeur réduite sur mobile */
+.nav-link {
+	position: relative;
+	padding-bottom: 0.85rem; /* espace pour la barre (augmente pour éloigner la barre du texte) */
+}
+.nav-link::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -8px; /* décale la barre davantage sous le texte */
+	height: 3px;
+	width: 100%; /* largeur de la barre par rapport au lien (un peu plus courte que le texte) */
+	background: #ffffff;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: center;
+	opacity: 0;
+	/* durée augmentée et délai pour un affichage plus agréable */
+	transition: transform 350ms cubic-bezier(.2,.9,.2,1) 150ms, opacity 300ms ease 150ms;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after,
+.nav-link.active::after {
+	transform: translateX(-50%) scaleX(1);
+	opacity: 1;
+}
+
+/* petites améliorations responsives */
+@media (max-width: 768px) {
+	.nav-link::after {
+		height: 2px;
+		bottom: -6px;
+		width: 70%;
+	}
+}
