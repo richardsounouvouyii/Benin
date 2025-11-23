@@ -1,7 +1,7 @@
 import EventCard, { type EventItem } from './EventCard'
 import { ArrowRight } from 'lucide-react'
-import danse from '../assets/images/danse.png'
-import maison from '../assets/images/maison.png'
+import danse from '../assets/images/nosdanseurs.png'
+import maison from '../assets/images/nonretour.png'
 
 export type EventsSectionProps = {
   events?: EventItem[]
@@ -22,7 +22,7 @@ export default function EventsSection({
     },
     {
       id: 'vodoun-2',
-      title: 'Festival International du Vodoun',
+      title: 'Festival International a la porte du non-retour',
       description: 'Plongez dans les traditions ancestrales avec des danses, des rituels et des célébrations vibrantes. Une expérience culturelle...',
       startDate: '2025-01-10',
       endDate: '2025-01-12',
@@ -34,16 +34,16 @@ export default function EventsSection({
   className = ''
 }: EventsSectionProps) {
   return (
-    <section className={`w-full  flex flex-col items-center ${className}`} aria-labelledby="events-title">
-      <div className="w-full max-w-6xl px-4">
+    <section className={`w-full flex flex-col h-270 items-center ${className}`} aria-labelledby="events-title">
+      <div className="w-full max-w-7xl gap-19">
         <h2
           id="events-title"
           className="text-white"
           style={{
             fontFamily: 'Mitr, sans-serif',
             fontWeight: 600,
-            fontStyle: 'normal',
-            fontSize: '48px',
+            fontStyle: 'semibold',
+            fontSize: '64px',
             lineHeight: '100%',
             letterSpacing: '0px',
             textTransform: 'uppercase'
@@ -52,12 +52,12 @@ export default function EventsSection({
           Événements à venir
         </h2>
         <p
-          className="mt-6 text-white/90 max-w-2xl"
+          className="mt-6 text-white/95 "
           style={{
             fontFamily: 'Mitr, sans-serif',
             fontWeight: 300,
             fontStyle: 'normal',
-            fontSize: '14px',
+            fontSize: '18px',
             lineHeight: '150%',
             letterSpacing: '0px'
           }}
@@ -70,8 +70,8 @@ export default function EventsSection({
         <div className="flex justify-center mt-12">
           <a
             href="/destinations"
-            className="inline-flex items-center gap-2 px-5 py-3 border border-white text-white hover:bg-white hover:text-[#C20026] transition-colors duration-300"
-            style={{ fontFamily: 'Mitr, sans-serif', fontWeight: 500, fontSize: '14px' }}
+            className="inline-flex items-center mr-18 mt-10 gap-2 px-5 py-3 border border-white text-white hover:bg-white hover:text-[#C20026] transition-colors duration-300"
+            style={{ fontFamily: 'Mitr, sans-serif', fontWeight: 500, fontSize: '16px' }}
           >
             Voir toutes les destinations
             <ArrowRight size={18} />

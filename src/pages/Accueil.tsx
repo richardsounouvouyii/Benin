@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import imageAccueil from '../assets/images/imageAccueil.png'
+import heroVideo from '../assets/videos/videos.mp4'
 import CardAccueil from '../components/CardAccueil'
 import FeatureTextCard from '../components/FeatureTextCard'
 import HoverImage from '../components/HoverImage'
@@ -14,6 +14,8 @@ import lac from '../assets/images/lac.png'
 import benin from '../assets/images/benin.png'
 import StatsStrip from '../components/StatsStrip'
 import EventsSection from '../components/EventsSection'
+import TestimonialsSection from '../components/TestimonialsSection'
+
 // import maison from '../assets/images/maison.png'
 // import danse from '../assets/images/danse.png'
 // import nosdanseurs from '../assets/images/nosdanseurs.png'
@@ -25,10 +27,15 @@ export default function Home() {
       style={{ height: 'calc(100vh - 5rem)' }}
       className="relative w-full bg-cover bg-center bg-no-repeat"
     >
-      {/* background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${imageAccueil})` }}
+      {/* background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-label="Vidéo de présentation"
       />
 
       {/* overlay for better contrast */}
@@ -181,11 +188,15 @@ export default function Home() {
         <div className="pt-20">
           <StatsStrip />
         </div>
-        <div className="pt-32 bg-[#E2183A]" role="region" aria-label="Événements à venir">
-          <EventsSection />
-        </div>
-      </div>
 
+      </div>
+      <div className="pt-42 mt-33 bg-[#E2183A]" role="region" aria-label="Événements à venir">
+        <EventsSection />
+      </div>
+      <div className="md:p-32 bg-white text-[#E2183A]">
+        <TestimonialsSection />
+      </div>
+   
     </>
   )
 }

@@ -25,7 +25,7 @@ export default function StatsStrip({
         {stats.map((s, i) => (
           <div
             key={i}
-            className={`${cardColorClass} rounded-sm h-32 flex flex-col items-center justify-center text-white shadow-sm`}
+            className={`${cardColorClass} rounded-sm h-42 flex flex-col items-center justify-center text-white shadow-sm`}
           >
             <div
               className="text-center align-middle"

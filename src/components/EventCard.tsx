@@ -25,8 +25,8 @@ function formatDateRange(start: string, end: string): string {
 
 export default function EventCard({ event }: { event: EventItem }) {
   return (
-    <article className="bg-white w-full max-w-xl shadow-sm border border-neutral-200 overflow-hidden flex flex-col" aria-labelledby={`event-title-${event.id}`}> 
-      <div className="w-full h-60 bg-neutral-100 overflow-hidden">
+    <article className="bg-white w-full h-160 max-w-xl shadow-sm border border-neutral-200 overflow-hidden flex flex-col" aria-labelledby={`event-title-${event.id}`}> 
+      <div className="w-full h-90 bg-neutral-100 overflow-hidden">
         <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
       </div>
       <div className="p-6 flex flex-col gap-4 flex-1">
@@ -37,7 +37,7 @@ export default function EventCard({ event }: { event: EventItem }) {
             fontFamily: 'Mitr, sans-serif',
             fontWeight: 600,
             fontStyle: 'normal',
-            fontSize: '20px',
+            fontSize: '26px',
             lineHeight: '120%',
             letterSpacing: '0px'
           }}
@@ -50,27 +50,27 @@ export default function EventCard({ event }: { event: EventItem }) {
             fontFamily: 'Mitr, sans-serif',
             fontWeight: 300,
             fontStyle: 'normal',
-            fontSize: '13px',
+            fontSize: '16px',
             lineHeight: '150%',
             letterSpacing: '0px'
           }}
         >
           {event.description}
         </p>
-        <div className="flex flex-wrap items-center gap-6 text-xs" style={{ fontFamily: 'Mitr, sans-serif' }}>
+        <div className="flex flex-wrap items-center gap-6 text-sm md:text-base" style={{ fontFamily: 'Mitr, sans-serif' }}>
           <div className="flex items-center gap-2">
-            <CalendarDays size={16} />
+            <CalendarDays size={25} />
             <span>{formatDateRange(event.startDate, event.endDate)}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin size={16} />
+          <div className="flex items-center gap-2 font-semibold lg:ml-36">
+            <MapPin size={26} />
             <span>{event.location}</span>
           </div>
         </div>
         <div className="pt-2">
           <a
             href={event.ctaHref || '#'}
-            className="inline-flex items-center gap-2 text-sm font-medium text-black hover:text-[#C20026]"
+            className="inline-flex items-center gap-2 text-lg lg:ml-15 font-medium text-black hover:text-[#C20026]"
             style={{ fontFamily: 'Mitr, sans-serif' }}
           >
             {event.ctaLabel || 'En savoir plus'}
