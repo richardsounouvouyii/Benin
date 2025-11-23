@@ -33,7 +33,7 @@ export default function Footer() {
               className="text-neutral-600 text-sm"
               style={{ fontWeight: 300, lineHeight: '150%' }}
             >
-              Lorem ipsum dolor sit amet consectetur. In nibh ut enim mauris lectus cursus volutpat viverra.
+              Pour recevoir les dernières nouvelles et offres spéciales, abonnez-vous à notre newsletter en entrant votre adresse e-mail ci-dessous.
             </p>
           </div>
           <div className="md:col-span-7">
