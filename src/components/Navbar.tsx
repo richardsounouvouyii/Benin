@@ -4,9 +4,9 @@ import logo from '../assets/images/logo.png'
 export default function Navbar() {
   return (
     <header className="w-full">
-      <nav className="bg-[#C20026] text-white w-full">
+      {/* nav fixed en haut */}
+      <nav className="fixed top-0 left-0 right-0 bg-[#C20026] text-white z-50">
         <div className="h-20 w-full pl-32 pr-32 flex items-center justify-between">
-
           {/* Logo Left */}
           <div className="flex items-center">
             <img src={logo} alt="Logo" className="h-14 w-auto" />
@@ -42,9 +42,11 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-
         </div>
       </nav>
+
+      {/* spacer pour compenser la nav fixe (même hauteur que la nav) */}
+      <div className="h-20" aria-hidden="true" />
     </header>
   )
 }
