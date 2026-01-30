@@ -1,4 +1,4 @@
-
+// ...existing code...
 export default function GalleryCard({ src, label }: { src: string; label?: string }) {
   return (
     <figure className="relative bg-neutral-100 overflow-hidden rounded-md">
