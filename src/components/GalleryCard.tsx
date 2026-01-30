@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function GalleryCard({ src, label }: { src: string; label?: string }) {
   return (

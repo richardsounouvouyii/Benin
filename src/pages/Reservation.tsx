@@ -175,7 +175,7 @@ export default function Reservation() {
                 <label className="block text-sm text-transparent mb-2">action</label>
                 <button
                   type="submit"
-                  className="h-12 px-6 bg-[#E2183A] text-white rounded-md shadow-md hover:opacity-95 transition"
+                  className="h-12 px-6 bg-[#E2183A] text-white rounded-md shadow-md hover:opacity-95 transition cursor-pointer"
                 >
                   Réserver
                 </button>

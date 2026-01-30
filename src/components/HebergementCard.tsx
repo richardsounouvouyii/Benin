@@ -65,7 +65,7 @@ export default function HebergementCard({
         <button
           type="button"
           onClick={onReserve}
-          className="w-full h-12 bg-[#E2183A] text-white rounded-md hover:opacity-95 transition"
+          className="w-full h-12 bg-[#E2183A] text-white rounded-md hover:bg-white hover:text-[#E2183A] border border-[#E2183A] transition-colors cursor-pointer font-medium"
         >
           Réserver
         </button>

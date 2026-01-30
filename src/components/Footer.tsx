@@ -53,7 +53,7 @@ export default function Footer() {
               </div>
               <button
                 type="submit"
-                className="h-12 px-8 bg-[#E2183A] text-white text-sm font-medium rounded hover:bg-white hover:text-[#E2183A] border border-[#E2183A] transition-colors"
+                className="h-12 px-8 bg-[#E2183A] text-white text-sm font-medium rounded hover:bg-white hover:text-[#E2183A] border border-[#E2183A] transition-colors cursor-pointer"
                 style={{ fontWeight: 500 }}
               >
                 S'abonner
